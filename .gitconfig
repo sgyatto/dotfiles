@@ -1,0 +1,24 @@
+[color]
+    ui = true
+[user]
+    name = sgyatto
+    email = 42696711+sgyatto@users.noreply.github.com
+[core]
+    excludesfile = ~/.gitignore_global
+[alias]
+    lol = log --graph --decorate --pretty=oneline --all --abbrev-commit
+    co = checkout
+    ci = commit -v
+    st = status -sb
+    br = branch
+[mergetool]
+    keepbackup = false
+[push]
+    default = simple
+[merge]
+    ff = false
+[pull]
+    ff = only
+[ghq]
+    root = ~/dev/src
+    root = ~/dev/go/src
