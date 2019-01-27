@@ -56,12 +56,22 @@ function peco-history-selection() {
     CURSOR=$#BUFFER
     zle reset-prompt
 }
-
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
+
 # PATH
-export GOPATH=$HOME/work/go
+export GOPATH=$HOME/dev/go
 #export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
 #export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PGDATA="/usr/local/var/postgres"
