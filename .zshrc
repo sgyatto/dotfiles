@@ -23,6 +23,7 @@ setopt correct
 setopt auto_pushd
 setopt list_packed
 setopt nobeep
+setopt ignore_eof
 
 # prompt
 PROMPT="%{${fg[green]}%}%n@%m %{${fg[yellow]}%}%c %{${fg[red]}%}%# %{${reset_color}%}"
