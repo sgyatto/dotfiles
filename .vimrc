@@ -74,6 +74,7 @@ augroup FileTypeAutoCmd
   autocmd FileType ruby setlocal ts=2 sw=2 sts=0
   autocmd FileType javascript setlocal ts=2 sw=2 sts=0
   autocmd FileType xml,html,css setlocal ts=2 sw=2 sts=0
+  autocmd FileType go setlocal noexpandtab ts=4 sw=4
 augroup END
 
 "==========================
