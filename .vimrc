@@ -106,3 +106,9 @@ nnoremap ,eC :e ++enc=cp932<CR>
 nnoremap ,U :set fileencoding=utf8<CR>
 nnoremap ,E :set fileencoding=euc-jp<CR>
 nnoremap ,C :set fileencoding=cp932<CR>
+
+" 日付
+nnoremap <silent> <F6> <ESC>i[<C-R>=strftime("%Y-%m-%d %H:%M")<CR>]
+inoremap <silent> <F6> <ESC>i[<C-R>=strftime("%Y-%m-%d %H:%M")<CR>]
+nnoremap <silent> <F7> <ESC>i[<C-R>=strftime("%Y-%m-%d")<CR>]
+inoremap <silent> <F7> <ESC>i[<C-R>=strftime("%Y-%m-%d")<CR>]
