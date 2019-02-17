@@ -28,6 +28,9 @@ setopt ignore_eof
 # prompt
 PROMPT="%{${fg[green]}%}%n@%m %{${fg[yellow]}%}%c %{${fg[red]}%}%# %{${reset_color}%}"
 
+# delete
+bindkey "^[[3~" delete-char
+
 # gitのbranch名を表示
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
