@@ -69,7 +69,6 @@ function peco-src () {
     BUFFER="cd ${selected_dir}"
     zle accept-line
   fi
-  zle clear-screen
 }
 zle -N peco-src
 bindkey '^]' peco-src
