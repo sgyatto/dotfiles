@@ -75,10 +75,10 @@ bindkey '^]' peco-src
 
 # PATH
 export GOPATH=$HOME/dev/go
-#export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
-#export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PGDATA="/usr/local/var/postgres"
+#export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH="$GOPATH/bin:$HOME/.nodebrew/current/bin:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
