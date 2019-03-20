@@ -2,6 +2,7 @@ export LANG=ja_JP.UTF-8
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -Uz compinit && compinit -C 
 autoload -U colors && colors
+typeset -U path PATH
 # マッチしなければ大文字を小文字に変えつつ補完
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -73,14 +74,22 @@ function peco-src () {
 zle -N peco-src
 bindkey '^]' peco-src
 
+# alc
+function alc () {
+  if [ $# != 0 ]; then
+    w3m "https://eow.alc.co.jp/$*/UTF-8/?ref=sa" | less +37
+  else
+    echo 'usage: alc word'
+  fi
+}
+
 # PATH
 export GOPATH=$HOME/dev/go
 export PGDATA="/usr/local/var/postgres"
 #export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-export PATH="$GOPATH/bin:$HOME/.nodebrew/current/bin:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export PATH="$GOPATH/bin:$HOME/.nodebrew/current/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
