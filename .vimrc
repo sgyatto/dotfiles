@@ -81,8 +81,7 @@ augroup END
 " Key Bind
 "==========================
 
-nnoremap ; :
-
+noremap ; :
 noremap j gj
 noremap k gk
 noremap gj j
