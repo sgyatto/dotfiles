@@ -1,6 +1,6 @@
 export LANG=ja_JP.UTF-8
-fpath=(/usr/local/share/zsh-completions $fpath)
-autoload -Uz compinit && compinit -C 
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
 autoload -U colors && colors
 typeset -U path PATH
 # マッチしなければ大文字を小文字に変えつつ補完
