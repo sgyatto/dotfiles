@@ -50,6 +50,9 @@ alias grep='grep --color=auto'
 alias vf='vim +VimFilerExplorer'
 alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
 
+# curl
+setopt nonomatch
+
 # memo
 memofile=~/Dropbox/memo.txt
 function g() { grep -in $1 $memofile }
