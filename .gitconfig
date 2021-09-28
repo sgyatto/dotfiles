@@ -5,6 +5,8 @@
     email = 42696711+sgyatto@users.noreply.github.com
 [core]
     excludesfile = ~/.gitignore_global
+    autocrlf = input
+    precomposeunicode = true
 [alias]
     lol = log --graph --decorate --pretty=oneline --all --abbrev-commit
     co = checkout
