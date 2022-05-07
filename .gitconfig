@@ -1,26 +1,28 @@
 [color]
-    ui = true
+	ui = true
 [user]
-    name = sgyatto
-    email = 42696711+sgyatto@users.noreply.github.com
+	name = sgyatto
+	email = 42696711+sgyatto@users.noreply.github.com
 [core]
-    excludesfile = ~/.gitignore_global
-    autocrlf = input
-    precomposeunicode = true
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	precomposeunicode = true
 [alias]
-    lol = log --graph --decorate --pretty=oneline --all --abbrev-commit
-    co = checkout
-    ci = commit -v
-    st = status -sb
-    br = branch
+	lol = log --graph --decorate --pretty=oneline --all --abbrev-commit
+	co = checkout
+	ci = commit -v
+	st = status -sb
+	br = branch
 [mergetool]
-    keepbackup = false
+	keepbackup = false
 [push]
-    default = simple
+	default = simple
 [merge]
-    ff = false
+	ff = false
 [pull]
-    ff = only
+	ff = only
 [ghq]
-    root = ~/dev/go/src
-    root = ~/dev/src
+	root = ~/dev/go/src
+	root = ~/dev/src
+[fetch]
+	prune = true
