@@ -92,9 +92,14 @@ export PGDATA="/usr/local/var/postgres"
 #export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export PATH="$GOPATH/bin:$HOME/.nodebrew/current/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+#export PATH="$GOPATH/bin:$HOME/.nodebrew/current/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$GOPATH/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
+
 # Customize
 [ -f $HOME/.zshrc.mine ] && source $HOME/.zshrc.mine
+
