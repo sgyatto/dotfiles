@@ -8,7 +8,7 @@
 	autocrlf = input
 	precomposeunicode = true
 [alias]
-	lol = log --graph --decorate --pretty=oneline --all --abbrev-commit
+	lol = log --graph --format='%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s'
 	co = checkout
 	ci = commit -v
 	st = status -sb
