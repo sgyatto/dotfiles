@@ -10,7 +10,7 @@
 [alias]
 	lol = log --graph --format='%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s'
 	co = checkout
-	ci = commit -v
+	c = commit -v
 	st = status -sb
 	br = branch
 [mergetool]

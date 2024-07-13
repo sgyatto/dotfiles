@@ -49,6 +49,7 @@ alias gls="gls --color"
 alias grep='grep --color=auto'
 alias vf='vim +VimFilerExplorer'
 alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
+alias k=kubectl
 
 # curl
 setopt nonomatch
@@ -89,17 +90,21 @@ function alc () {
 # PATH
 export GOPATH=$HOME/dev/go
 export PGDATA="/usr/local/var/postgres"
+export VOLTA_HOME="$HOME/.volta"
 #export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
 #export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 #export PATH="$GOPATH/bin:$HOME/.nodebrew/current/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="$GOPATH/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$GOPATH/bin:$VOLTA_HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
+#. /usr/local/opt/asdf/libexec/asdf.sh
+
 
 # Customize
 [ -f $HOME/.zshrc.mine ] && source $HOME/.zshrc.mine
 
+# zshrc reload : exec zsh
+# command not found: rehash
